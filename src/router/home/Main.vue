@@ -4,7 +4,7 @@
 
 <script>
 import ajax from '@/lib/ajax';
-import apiUrl from './apiUrl';
+import apiUrl from './api';
 
 export default {
     created() {

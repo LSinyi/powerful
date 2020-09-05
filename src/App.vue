@@ -13,6 +13,7 @@ export default {
 };
 </script>
 
+<style lang="scss" src="@/css/index.scss"></style>
 <style lang="scss" scoped>
 .router-view {
     height: 100%;

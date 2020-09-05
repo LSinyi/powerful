@@ -1,0 +1,178 @@
+/****** 標準化 ******/
+@import './standard.scss';
+
+/****** normalize ******/
+@import "~normalize.css/normalize.css";
+
+/****** Material Icons ******/
+@import '~material-design-icons/iconfont/material-icons.css';
+
+/****** color ******/
+@import './color.scss';
+
+html,
+body,
+#app,
+.main {
+    min-height: 100%;
+}
+body,
+button,
+input {
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+* {
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* 共用 */
+.main .ui,
+.el-popover .ui,
+.el-dialog__wrapper .ui {
+    &-color {
+        &-blue {
+            color: #4691F7;
+        }
+        &-green {
+            color: #06B76C;
+        }
+        &-gray {
+            color: #A3AFB7;
+        }
+        &-red {
+            color: #FF6275;
+        }
+    }
+    &-item {
+        &-label {
+            padding-right: 12px;
+            font-size: 14px;
+            color: #606266;
+        }
+        &-inline {
+            display: inline-block;
+            margin: 0 10px 20px 0;
+        }
+        &-list {
+            margin-bottom: 10px;
+        }
+    }
+    &-btn {
+        display: inline-block;
+        color: #4890f7;
+        background-color: #DDEAFF;
+        border-radius: 2px;
+        font-weight: 300;
+        border: none;
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+        &.is-disabled:hover {
+            background: #C0C4CC;
+            color: #FFF;
+        }
+        &-search {
+            margin-left: 8px;
+            display: inline-block;
+            padding: 8px 18px;
+            background: #00A5A8;
+            font-size: 14px;
+            font-weight: 300;
+            color: #FFF;
+            &:hover {
+                background: #199EA0;
+            }
+            i {
+                font-weight: bold;
+                &.el-icon-search {
+                    line-height: 14px;
+                }
+            }
+        }
+        &-blue {
+            color: #FFF;
+            background-color: #4890F7;
+            font-weight: 300;
+            border: none;
+            &:hover {
+                background-color: #50A6FF;
+            }
+        }
+        &-red {
+            color: #FFF;
+            background-color: #FF6275;
+            font-weight: 300;
+            border: none;
+            &:hover {
+                background-color: #F9536F;
+            }
+        }
+        &-green {
+            color: #FFF;
+            background-color: #06B76C;
+            font-weight: 300;
+            border: none;
+            &:hover {
+                background-color: #05B168;
+            }
+        }
+        &-normal {
+            background: inherit;
+            padding: 0;
+            border: none;
+            font-size: 14px;
+            font-weight: normal;
+            color: #4890F7;
+        }
+        &-gray {
+            background: #E7ECF2;
+            color: #404E67;
+            font-weight: normal;
+            &:hover {
+                background-color: #C2CCD6;
+            }
+        }
+        &-light-blue {
+            background: #ECF5FF;
+            color: #4890F7;
+            border: 1px solid #B3D8FF;
+            font-weight: normal;
+            &:hover {
+                background-color: #4890F7;
+                color: #FFF;
+            }
+        }
+        &--small {
+            padding: 6px 18px;
+            font-size: 14px;
+        }
+        &--medium {
+            padding: 7.5px 18px;
+            font-size: 14px;
+        }
+        &--big {
+            padding: 9.5px 18px;
+            font-size: 14px;
+        }
+        &-square {
+            padding: 8px 8px;
+            font-size: 14px;
+        }
+    }
+    &-icon {
+        font-family: "Material Icons";
+        font-size: 16px;
+
+        &-save:after {
+            content: "\E161";
+        }
+        &-delete:after {
+            content: "\E872";
+        }
+    }
+}

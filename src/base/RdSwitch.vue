@@ -30,21 +30,20 @@ export default {
     },
     data() {
         return {
-            getClass: []
+            getClass: [],
+            /* icon 與背景顏色對應表 */
+            switchBgColor: {
+                check: '#D9F5E9',
+                close: '#E5E8EB'
+            }
         };
     },
     computed: {
         activeColor() {
-            if (this.activeIcon === 'check') {
-                return '#D9F5E9';
-            }
-            return '#13CE66';
+            return this.switchBgColor[this.activeIcon] || '#409EFF';
         },
         inactiveColor() {
-            if (this.inactiveIcon === 'close') {
-                return '#E5E8EB';
-            }
-            return '#C0CCDA'; // element ui color default
+            return this.switchBgColor[this.inactiveIcon] || '#C0CCDA';
         }
     },
     watch: {
@@ -88,11 +87,17 @@ export default {
                 content: "\E5CA";
                 background-color: #22D38F;
             }
+            >.el-switch__label.is-active {
+                color: #22D38F;
+            }
         }
         &_close {
             >.el-switch__core:after {
                 content: "\E5CD";
                 background-color: #818B9D;
+            }
+            >.el-switch__label.is-active {
+                color: #818B9D;
             }
         }
     }
